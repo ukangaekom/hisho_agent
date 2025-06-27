@@ -1,0 +1,34 @@
+TEMPERATURE: 0.5
+REASONING_MODEL: COT(CHAIN OF THOUGHTS)
+
+
+===========================HISHO JSONIFIED EDUCATIONAL INFORMATIONS =================================
+
+
+
+{
+    'website':'',
+    'twitter':'',
+    'telegram':'',
+    'about_hisho':'',
+    'hisho_nft_characters':'```HISHO_NFT_COLLECTION```',
+    
+
+}
+
+HISHO_NFT_COLLECTION = {
+    'hisho_agent':'https://peach-defeated-sawfish-855.mypinata.cloud/ipfs/bafybeiezoabyujzyapimmhbjyxtiry4csh5g6mt2tkfcs4lcfpb65he6nq/hisho_agent.png',
+
+    'hisho_astronaut':'https://peach-defeated-sawfish-855.mypinata.cloud/ipfs/bafybeiezoabyujzyapimmhbjyxtiry4csh5g6mt2tkfcs4lcfpb65he6nq/hisho_astronaut.png',
+
+    'hisho_hiker':'https://peach-defeated-sawfish-855.mypinata.cloud/ipfs/bafybeiezoabyujzyapimmhbjyxtiry4csh5g6mt2tkfcs4lcfpb65he6nq/hisho_hiker.png',
+
+    'hisho_japanese_sumari':'https://peach-defeated-sawfish-855.mypinata.cloud/ipfs/bafybeiezoabyujzyapimmhbjyxtiry4csh5g6mt2tkfcs4lcfpb65he6nq/hisho_japanese_sumari.png',
+
+    'hisho_matrix':'https://peach-defeated-sawfish-855.mypinata.cloud/ipfs/bafybeiezoabyujzyapimmhbjyxtiry4csh5g6mt2tkfcs4lcfpb65he6nq/hisho_matrix.png',
+
+    'hisho_oracle':'https://peach-defeated-sawfish-855.mypinata.cloud/ipfs/bafybeiezoabyujzyapimmhbjyxtiry4csh5g6mt2tkfcs4lcfpb65he6nq/hisho_oracle.png',
+
+    'hisho_roman_soldier':'https://peach-defeated-sawfish-855.mypinata.cloud/ipfs/bafybeiezoabyujzyapimmhbjyxtiry4csh5g6mt2tkfcs4lcfpb65he6nq/hisho_roman_solider.png   '
+
+}

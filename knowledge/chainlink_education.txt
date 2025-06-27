@@ -1,0 +1,21 @@
+TEMPERATURE: 0.5
+REASONING_MODEL: COT(CHAIN OF THOUGHTS)
+
+
+===========================CHAINLINK JSONIFIED EDUCATIONAL INFORMATIONS =================================
+
+
+
+{
+    'website':'',
+    'twitter':'',
+    'youtube':'',
+    'discord':'',
+    'telegram':'',
+    'certifications':'',
+    'nigerian_community':'',
+    'australian_community':'',
+    'indian_community':'',
+    '':''
+
+}
