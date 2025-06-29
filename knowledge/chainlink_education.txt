@@ -7,7 +7,7 @@ REASONING_MODEL: COT(CHAIN OF THOUGHTS)
 
 
 {
-    'website':'',
+    'website':'https://chain.link',
     'twitter':'',
     'youtube':'',
     'discord':'',
@@ -16,6 +16,10 @@ REASONING_MODEL: COT(CHAIN OF THOUGHTS)
     'nigerian_community':'',
     'australian_community':'',
     'indian_community':'',
-    '':''
+    'branding':'{
+        colors:[],
+        logo:[]
+        }',
+    `
 
 }
