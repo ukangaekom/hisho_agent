@@ -1,7 +1,9 @@
+use ethers::{prelude::abigen};
 
-use ethers_contract::abigen;
 
 abigen!(HishoStaking,
-    "../abis/",
+    "../abis/hisho_staking.json",
     event_derives(serde::Deserialize, serde::Serialize)  
 );
+
+pub use HishoStaking::*;

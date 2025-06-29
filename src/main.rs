@@ -1,6 +1,9 @@
+// Declaration of Modules
+mod tools;
 
-
-
+// Importing of functions
+use tools::prices::{get_price, get_marketcap};
+use tools::utils::{parse_input, extract_output};
 
 
 use frankenstein::GetUpdatesParams;

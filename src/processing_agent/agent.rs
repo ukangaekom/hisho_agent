@@ -5,10 +5,8 @@ use genai::chat::{ChatMessage, ChatRequest};
 use genai::Client;
 
 
-const PROCESS_SYSTEM_CONFIGURATION="NOT YET INCLUDED";
+const PROCESS_SYSTEM_CONFIGURATION : &str = include_str!("../../knowledge/hisho_agent.txt");
 
-dotenv_flow::dotenv_flow().ok();
-Const MODEL: String = env::var("MODEL_ANTHROPIC").expect("The Model name must exist");
 
 #[tokio::main]
 pub async fn process(_text:&str) -> Option<std::string::String> {
@@ -20,7 +18,7 @@ pub async fn process(_text:&str) -> Option<std::string::String> {
         ChatMessage::user(_text.to_string())
     ]);
 
-    let model: &str = MODEL;
+    let model: &str = "gemini-1.5-flash-latest";
 
     let chat_res = client.exec_chat_stream(model, chat_req, None).await.ok();
     

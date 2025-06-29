@@ -1,6 +1,9 @@
-use ethers_contract::abigen;
+use ethers::{prelude::abigen};
 
 abigen!(HishoNFTs,
-     "../abis/",
+     "../abis/hisho_nft.json",
      event_derives(serde::Deserialize, serde::Serialize)
     );
+    
+pub use HishoNFTs::*;
+
