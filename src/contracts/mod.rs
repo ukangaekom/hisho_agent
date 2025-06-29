@@ -1,4 +1,4 @@
+pub mod contract;
+pub mod token;
 pub mod nft;
-pub mod staking;
-pub mod erc20;
-pub mod contracts;
+pub mod custom;
