@@ -1,11 +1,13 @@
 // Declaration of Modules
 pub mod tools;
 pub mod processing_agent;
+pub mod initialize;
 
 // Importing of functions
 use tools::price::{get_price, get_marketcap};
 use tools::utils::{parse_input, extract_output};
 use processing_agent::agent::{process};
+use initialize::onchain::evm_connection;
 
 
 // Telegram Bot Functions
