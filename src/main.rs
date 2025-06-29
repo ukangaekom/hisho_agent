@@ -1,15 +1,15 @@
 // Declaration of Modules
 pub mod tools;
 pub mod processing_agent;
-pub mod initialize;
-pub mod contracts;
+// pub mod initialize;
+// pub mod contracts;
 
 // Importing of functions
 use tools::price::{get_price, get_marketcap};
 use tools::utils::{parse_input, extract_output};
 use processing_agent::agent::{process};
-use initialize::onchain::evm_connection;
-use contracts::contract;
+// use initialize::onchain::evm_connection;
+// use contracts::contract;
 
 
 // Telegram Bot Functions
@@ -20,7 +20,7 @@ use frankenstein::TelegramApi;
 use frankenstein::{Api, UpdateContent};
 
 use std::env;
-use std::collections::HashMap;
+
 
 
 
@@ -95,7 +95,7 @@ fn main() {
 
 
                                 _ => {
-                                    agent_response = format!("{}", &output.unwrap_or_default());
+                                    agent_response = format!("{:#?}",&output.unwrap_or_default());
                                 }
 
                                 

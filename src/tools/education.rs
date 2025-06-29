@@ -21,7 +21,7 @@ pub async fn chainlink_education(_text:&str) -> Option<std::string::String> {
 
     let chat_res = client.exec_chat_stream(model, chat_req, None).await.ok();
     
-    let routing_response = match print_chat_stream(chat_res.expect("REASON"),  None).await {
+    let _routing_response = match print_chat_stream(chat_res.expect("REASON"),  None).await {
 
         Ok(response) => {
             return Some(response);
@@ -51,7 +51,7 @@ pub async fn hisho_education(_text:&str) -> Option<std::string::String> {
 
     let chat_res = client.exec_chat_stream(model, chat_req, None).await.ok();
     
-    let routing_response = match print_chat_stream(chat_res.expect("REASON"),  None).await {
+    let _routing_response = match print_chat_stream(chat_res.expect("REASON"),  None).await {
 
         Ok(response) => {
             return Some(response);

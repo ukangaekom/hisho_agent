@@ -8,10 +8,10 @@ REASONING_MODEL: COT(CHAIN OF THOUGHTS)
 
 {
     'website':'https://chain.link',
-    'twitter':'',
+    'twitter':'https://x.com/chainlink',
     'youtube':'',
     'discord':'',
-    'telegram':'',
+    'telegram':'https://t.me/chainlinkofficial',
     'certifications':'',
     'nigerian_community':'',
     'australian_community':'',
