@@ -83,12 +83,13 @@ THE FOLLOWING ARE THE FUNCTIONS THAT YOU HAVE EXTENSTIONS TO:
 
 
 THE FOLLOWING ARE EXAMPLES OF SIMULATED CHAT AND HOW YOUR RESPONSE SHOULD BE:
+NEVER USE TOOL CODES: JUST RETURN THE ARRAY TYPE ```[tool_name, parameter]``` and the parser will understand
 
 User: Heyoo! Whats the price of Bitcoin?
-Output: [get_price,BTC]
+Output: `[get_price,BTC]`
 
 User: What the price of scroll token?
-Output: [get_price, SCR]
+Output: ``[get_price, SCR]
 
 
 User: What is the price of BNB
@@ -242,6 +243,7 @@ COT(CHAIN OF THOUGHT GUIDE):
 5. OUTPUT:
     OUTPUT FORMAT MUST BE IN THE FORM EXAMPLE BELOW
     NOTE: ALWAYS FOLLOW FORMAT STRICT
+    EXAMPLE
     ```
     Chainlink_related_context =>. OUTPUT: hey what do you want to know about chainlink
     Customer_related_context: =>. OUTPUT: How are you!
@@ -249,6 +251,11 @@ COT(CHAIN OF THOUGHT GUIDE):
     Trade_related_context: =>. 'OUTPUT: [get_price,BTC]'
     Trade_related_context: =>. 'OUTPUT: [get_price,SOL]'
     ```
+
+
+TOOLS RELATED CONTEXT OUTPUT FORMATS
+
+OUTPUT_FORMAT: ```[tool_name, parameter]```
 
 
 
