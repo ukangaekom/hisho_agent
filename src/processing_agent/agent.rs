@@ -1,4 +1,3 @@
-use std::env;
 
 use genai::chat::printer::print_chat_stream;
 use genai::chat::{ChatMessage, ChatRequest};

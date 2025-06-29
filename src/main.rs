@@ -1,11 +1,14 @@
 // Declaration of Modules
-mod tools;
+pub mod tools;
+pub mod processing_agent;
 
 // Importing of functions
-use tools::prices::{get_price, get_marketcap};
+use tools::price::{get_price, get_marketcap};
 use tools::utils::{parse_input, extract_output};
+use processing_agent::agent::{process};
 
 
+// Telegram Bot Functions
 use frankenstein::GetUpdatesParams;
 use frankenstein::ReplyParameters;
 use frankenstein::SendMessageParams;

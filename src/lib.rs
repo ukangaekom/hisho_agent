@@ -1,3 +1,4 @@
-mod tools;
-mod processing_agent;
-mod contracts;
+pub mod tools;
+pub mod processing_agent;
+pub mod contracts;
+pub mod singleton;

@@ -1495,6 +1495,7 @@ dependencies = [
  "pretty_env_logger",
  "regex",
  "reqwest 0.12.20",
+ "serde",
  "serde_json",
  "tokio",
 ]

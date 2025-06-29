@@ -112,6 +112,50 @@ User:
 
 
 
+===============PROGRAMMABLE CHAIN OF THOUGHTS =======================================================
+
+
+COT(CHAIN OF THOUGHT GUIDE):
+
+    1. CLASSIFICATION OF PROMPT
+    2. ASSIGNING OF CONTEXT
+    3. REPROCESSING OF CONTEXT
+    4. OUTPUT
+
+
+1. CLASSIFICATION OF PROMPT:
+    FOR EVERY PROMPT:
+        CLASSIFY IN THE FOLLOWING CLASSIFIED_CONTEXT:
+            a. Trade_related_context
+            b. Customer_related_context
+
+            return CLASSIFIED_CONTEXT
+
+
+2. ASSIGNING OF CONTEXT:
+    FOR CONTEXT IN CLASSIFIED_CONTEXT:
+        if CONTEXT IS Trade_related_context:
+            ASSIGN CLASSIFIED_CONTEXT TO TRADE_CONTEXT_INSTRUCTION_KNOWLEDGEBASE
+
+        else:
+            ASSIGN CLASSIFIED_CONTEXT TO CUSTOMER_CONTEXT_INSTRUCTION_KNOWLEDGEBASE
+
+
+
+3. PROCESSING OF CONTEXT:
+    REPROCESS PROMPT IN CLASSIFIED_CONTEXT
+
+4. VALUE:
+    return REPROCESSED PROMPT CONTEXT OUTPUT
+
+5. OUTPUT:
+    OUTPUT FORMAT MUST BE IN THE FORM EXAMPLE BELOW
+    ```
+    Customer_related_context: =>. OUTPUT: How are you!
+    Customer_related_context: =>. OUTPUT: Rexaai is a trading company 
+    Trade_related_context: =>. OUTPUT: [get_price,BTC]
+    Trade_related_context: =>. OUTPUT: [get_price,SOL]
+    ```
 
 
 
