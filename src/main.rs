@@ -37,7 +37,7 @@ fn main() {
     loop {
         let result = api.get_updates(&update_params);
 
-        println!("result: {result:?}");
+        // println!("result: {result:?}");
 
         // Matching results from the api call: This result is either Ok() or Error()
         match result {
@@ -57,10 +57,10 @@ fn main() {
 
                             let mut agent_response:String = String::from("");
 
-                            let output = extract_output(&routing_response.unwrap());
+                            let output = extract_output(&routing_response.unwrap_or_default());
                             match output {
 
-                                output if output.clone().expect("REASON").contains("get_price") => {
+                                output if output.clone().unwrap_or_default().contains("get_price") => {
 
                                     if let Some((command, coin)) = parse_input(&output.unwrap()){
 
@@ -69,13 +69,13 @@ fn main() {
                                         agent_response = get_price(&coin);
                                         // agent_response = format!("Price of {:?} is {:?}", &coin, get_price(&prices)["USD"]);
                                         // agent_response = format!("{}",&prices);
-                                        println!("{:?}", &command);
+                                        println!("{:#?}", &command);
                                     }
 
                                 },
 
 
-                                output if output.clone().expect("REASON").contains("get_market_cap") => {
+                                output if output.clone().unwrap_or_default().contains("get_market_cap") => {
 
                                     if let Some((command, coin)) = parse_input(&output.unwrap()){
 
@@ -91,7 +91,7 @@ fn main() {
 
 
                                 _ => {
-                                    agent_response = format!("{}", &output.unwrap());
+                                    agent_response = format!("{}", &output.unwrap_or_default());
                                 }
 
                                 

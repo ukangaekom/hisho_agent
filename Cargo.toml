@@ -4,8 +4,17 @@ version = "0.1.0"
 edition = "2024"
 
 
+[lib]
+path = "src/lib.rs"  # Optional (default)
+
+[[bin]]
+name = "main"
+path = "src/main.rs" # Optional (default)
+
 [profile.dev]
 debug = true
+
+
 
 [dependencies]
 
@@ -32,5 +41,8 @@ genai = "=0.1.7"
 reqwest = "0.12.16"
 dptree = "0.3.0"
 regex = "1.11.1"
+
+
+# Encryption Related data
 
 

@@ -20,3 +20,4 @@ pub fn extract_output(content: &str) -> Option<String> {
         .and_then(|cap| cap.get(1))
         .map(|m| m.as_str().trim().to_string())
 }
+

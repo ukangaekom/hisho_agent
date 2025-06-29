@@ -39,7 +39,7 @@ static SCROLL_MAINNET: OnceLock<Provider<Http>> = OnceLock::new();
 
 
 // GET FUNCTIONS TESTNET
-fn get_avalanche_fuji_provider()-> &'static Provider<Http>{
+pub fn get_avalanche_fuji_provider()-> &'static Provider<Http>{
     AVALANCHE_FUJI.get_or_init(||{
         Provider::try_from(
             format!("https://avalanche-fuji.infura.io/v3/{:?}",get_infura_api_key())
@@ -47,7 +47,7 @@ fn get_avalanche_fuji_provider()-> &'static Provider<Http>{
     })
 }
 
-fn get_scroll_sepolia_provider()-> &'static Provider<Http>{
+pub fn get_scroll_sepolia_provider()-> &'static Provider<Http>{
     SCROLL_SEPOLIA.get_or_init(||{
         Provider::try_from(
             format!("https://scroll-sepolia.infura.io/v3/{:?}",get_infura_api_key())
@@ -58,7 +58,7 @@ fn get_scroll_sepolia_provider()-> &'static Provider<Http>{
 
 // GET FUNCTION MAINNET
 
-fn get_avalanche_cc_mainnet_provider()-> &'static Provider<Http>{
+pub fn get_avalanche_cc_mainnet_provider()-> &'static Provider<Http>{
     AVALANCHE_CC_MAINNET.get_or_init(||{
         Provider::try_from(
             format!("https://avalanche-mainnet.infura.io/v3/{:?}",get_infura_api_key())
@@ -66,7 +66,7 @@ fn get_avalanche_cc_mainnet_provider()-> &'static Provider<Http>{
     })
 }
 
-fn get_scroll_mainnet_provider()-> &'static Provider<Http>{
+pub fn get_scroll_mainnet_provider()-> &'static Provider<Http>{
     SCROLL_MAINNET.get_or_init(||{
         Provider::try_from(
             format!("https://scroll-mainnet.infura.io/v3/{:?}",get_infura_api_key())

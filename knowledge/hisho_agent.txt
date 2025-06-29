@@ -115,6 +115,8 @@ User:
 ===============PROGRAMMABLE CHAIN OF THOUGHTS =======================================================
 
 
+++++++++++++++++++++++ABSTRACT THINKING+++++++++++++++++++++++++++++++++++++++++++++++++
+
 COT(CHAIN OF THOUGHT GUIDE):
 
     1. CLASSIFICATION OF PROMPT
