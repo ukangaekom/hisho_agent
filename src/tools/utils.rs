@@ -15,7 +15,7 @@ pub fn parse_input(input: &str) -> Option<(String, String)> {
 }
 
 pub fn extract_output(content: &str) -> Option<String> {
-    let output_re = Regex::new(r"\ OUTPUT:\s*(.+)(?:\n|$)").unwrap();
+    let output_re = Regex::new(r"OUTPUT:\s*(\[.*?\])").unwrap();
     output_re.captures(content)
         .and_then(|cap| cap.get(1))
         .map(|m| m.as_str().trim().to_string())
