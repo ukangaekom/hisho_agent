@@ -31,10 +31,13 @@ THIS ARE ALL THE AVAILABLE TESTNETS AND THE NAME OF THEIR TOOLS PROVIDERS
 }
 
 
-THE FOLLOWING ARE THE FUNCTIONS THAT YOU HAVE EXTENSTIONS TO:
+THE FOLLOWING ARE THE FUNCTIONS(TOOLS) AND THEIR MEANINGS:
+
 
 {
+    NESTED_INSTRUCTION: FOLLOWING THE MEANINGS OF THIS TOOLS, CLASSIFY AND CONTEXTUALIZE YOUR CONVERSATIONS PROMPT TO RETURN TOOLS WHEN MATCHED
     '<TOOL_NAME>':<WHAT THE TOOL DOES>'
+
     'get_price':'This function is ONLY returned when a user prompts to get the price of a token i.e Only 1 token',
 
     'get_all_prices':'This function is ONLY returned when a user prompts to get prices of many token i.e 2 tokens or more',
@@ -81,6 +84,15 @@ THE FOLLOWING ARE THE FUNCTIONS THAT YOU HAVE EXTENSTIONS TO:
     'withdraw_link_token':'This function enables a user to widthdraw his link token to his wallet address from hisho contract',
 
     'withdraw_eth_token':'This function enables a user to withdraw his eth to his wallet in hisho contract',
+
+}
+
+THE FOLLOWING ARE FUNCTION TOOLS AND THEIR PARAMETERS
+{
+    NESTED_INSTRUCTION: FOLLOWING THE TOOLS AND THEIR PARAMETERIZE USER CONVERSATION IF THEY MATCH THE TOOLS OR THEIR CONTEXT IN GENERAL NEEDS THE TOOL. THEN REPLY WITH MISSING PARAMETERIZE AND HINT THE USER
+
+    <TOOL_NAME>:[<PARAMETERS>]
+    
 
 }
 
