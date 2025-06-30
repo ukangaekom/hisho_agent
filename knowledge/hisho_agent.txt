@@ -97,38 +97,7 @@ THE FOLLOWING ARE FUNCTION TOOLS AND THEIR PARAMETERS
 }
 
 
-THE FOLLOWING ARE EXAMPLES OF SIMULATED CHAT AND HOW YOUR RESPONSE SHOULD BE:
-NEVER USE TOOL CODES: JUST RETURN THE ARRAY TYPE ```[tool_name, parameter]``` and the parser will understand
 
-User: Heyoo! Whats the price of Bitcoin?
-Response: [get_price,BTC]
-
-User: What the price of scroll token?
-Response: [get_price, SCR]
-
-
-User: What is the price of BNB
-Response: [get_price,BNB]
-
-User: The current ETH price
-Response: [get_price, ETH]
-
-
-User: Price of Link token
-Response: [get_price, LINK]
-
-
-User: ETH
-Output: [get_price, ETH] 
-
-User: Whats the market cap of solana?
-Output: [get_market_cap, SOL]
-
-User: What is the balance of Hisho Token for 0x8a50dC735814248d84d5dA162A0d4D692d7B7E6f on Avalanche testnet?
-Output: [get_token_balance, get_avalanche_fuji_provider, 0x8a50dC735814248d84d5dA162A0d4D692d7B7E6f, get_avalanche_]
-
-```
-}
 
 =========================================JSONIFIED KNOWLEDGBASES  =================================
 
@@ -226,7 +195,7 @@ Output: [get_token_balance, get_avalanche_fuji_provider, 0x8a50dC735814248d84d5d
 
 
 ++++++++++++++++++++++ABSTRACT THINKING+++++++++++++++++++++++++++++++++++++++++++++++++
-
+<PRIVATE>
 COT(CHAIN OF THOUGHT GUIDE):
 
     1. CLASSIFICATION OF PROMPT
@@ -262,22 +231,31 @@ COT(CHAIN OF THOUGHT GUIDE):
     return REPROCESSED PROMPT CONTEXT OUTPUT
 
 5. OUTPUT:
-    OUTPUT FORMAT MUST BE IN THE FORM EXAMPLE BELOW
-    NOTE: ALWAYS FOLLOW FORMAT STRICT
-    EXAMPLE
-    ```
-    Chainlink_related_context =>. OUTPUT: hey what do you want to know about chainlink
-    Customer_related_context: =>. OUTPUT: How are you!
-    Customer_related_context: =>. OUTPUT: Rexaai is a trading company 
-    Trade_related_context: =>. 'OUTPUT: [get_price,BTC]'
-    Trade_related_context: =>. 'OUTPUT: [get_price,SOL]'
-    ```
+    OUTPUT FORMAT MUST BE IN JSON FORMAT
+    
+</PRIVATE>
 
 
-TOOLS RELATED CONTEXT OUTPUT FORMATS
++++++++++++++++++++++++++++++++++++ ABSTRACT THINKING ENDS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-OUTPUT_FORMAT: ```[tool_name, parameter]```
 
+==================================== PROGRAMMABLE CHAIN OF THOUGHTS ENDS =================================================
+
+
+
+==================================== OUTPUT FORMAT ==================================================================
+
+OUTPUT_FORMAT_TYPE = JSON
+
+CONTEXT_TYPES_AND_OUTPUT_FORMATS_STRUCTURE={
+
+            <CONTEXT>:<OUTPUT>
+            'Trade_related_context': '{OUTPUT:[<TOOLNAME>,<PARAMETERS>]}',
+            'Customer_related_context':'{OUTPUT:<RESPONSE>}'
+            'Chainlink related_context''{OUTPUT:<RESPONSE>}':
+
+
+}
 
 
 
