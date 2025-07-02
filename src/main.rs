@@ -54,21 +54,21 @@ fn main() {
                     if let UpdateContent::Message(message) = update.content {
 
                         if let Some(text) = message.text.clone(){
-                            println!("Text:{}",text);
+                            // println!("Text:{}",text);
                             // println!(" from {}", message.from.unwrap().username.unwrap());
 
                             let routing_response = process(&text);
 
-                            let mut agent_response:String = String::from("");
+                            let mut agent_response:String = String::new();
 
-                            let output = extract_output(&routing_response.unwrap_or_default());
+                            let output = extract_output(&routing_response.clone().unwrap_or_default());
                             match output {
 
                                 output if output.clone().unwrap_or_default().contains("get_price") => {
 
                                     if let Some((command, coin)) = parse_input(&output.unwrap()){
 
-                                        println!("The valid command has been triggered{}, {}!",&command, &coin);
+                                        // println!("The valid command has been triggered{}, {}!",&command, &coin);
                                         
                                         agent_response = get_price(&coin);
                                         // agent_response = format!("Price of {:?} is {:?}", &coin, get_price(&prices)["USD"]);
@@ -83,19 +83,20 @@ fn main() {
 
                                     if let Some((command, coin)) = parse_input(&output.unwrap()){
 
-                                        println!("The valid command has been triggered{}, {}!",&command, &coin);
+                                        // println!("The valid command has been triggered{}, {}!",&command, &coin);
                                         
                                         agent_response = format!("The marketcap of {} is {}",&coin,get_marketcap(&coin));
-                                        // agent_response = format!("Price of {:?} is {:?}", &coin, get_price(&prices)["USD"]);
-                                        // agent_response = format!("{}",&prices);
-                                        println!("{:?}", &command);
+                                        
+                                        // println!("{:?}", &command);
                                     }
 
                                 },
 
 
                                 _ => {
-                                    agent_response = format!("{:#?}",&output.unwrap_or_default());
+                                    agent_response = format!("{}", &routing_response.unwrap_or_default());
+                                    // println!("agent response: {:#?}", output);
+                                    // agent_response = "how are you".to_string();
                                 }
 
                                 
