@@ -33,6 +33,9 @@ serde = { version = "1.0", features = ["derive"] }
 # Bot Libraries
 frankenstein = "0.32.1"
 
+# Scrapper Libraries
+scraper = "0.12" 
+
 log = "0.4"
 pretty_env_logger = "0.5"
 genai = "=0.1.7"
